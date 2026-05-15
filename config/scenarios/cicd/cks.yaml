@@ -22,6 +22,8 @@ scenario:
     fma:
       enabled: false
       iterations: 5
+      launcher:
+        runtimeClassName: ""
 
 #    gateway:
 #      className: agentgateway

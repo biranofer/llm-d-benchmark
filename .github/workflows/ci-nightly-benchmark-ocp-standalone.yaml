@@ -95,7 +95,7 @@ on:
 
 jobs:
   nightly:
-    uses: llm-d/llm-d-infra/.github/workflows/reusable-ci-nightly-benchmark.yaml@main
+    uses: ./.github/workflows/reusable-ci-nightly-benchmark.yaml
     with:
       scenario_dir: ${{ inputs.scenario_dir || 'cicd' }}
       standup_method: ${{ inputs.standup_method || 'standalone' }}
@@ -113,8 +113,6 @@ jobs:
       monitoring_enabled: ${{ inputs.monitoring_enabled || 'true' }}
       dry_run: ${{ inputs.dry_run || 'false' }}
       verbose: ${{ inputs.verbose || 'false' }}
-      harness: ${{ inputs.harness || 'vllm-benchmark' }}
-      workload: ${{ inputs.workload || 'sanity_random.yaml' }}
-#      harness: ${{ inputs.harness || 'nop' }}
-#      workload: ${{ inputs.workload || 'nop.yaml' }}
+      harness: ${{ inputs.harness || 'nop' }}
+      workload: ${{ inputs.workload || 'nop.yaml' }}
     secrets: inherit
