@@ -74,5 +74,5 @@ scenario:
     images:
       benchmark:
         repository: ghcr.io/llm-d/llm-d-benchmark
-        tag: nightly
+        tag: cifix3
 
